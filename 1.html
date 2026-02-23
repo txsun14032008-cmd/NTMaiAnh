@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Những điều thú vị trong những ngày Tết</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            text-align: center;
+            color: #333;
+        }
+
+        header {
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 20px;
+        }
+
+        nav {
+            background: white;
+            padding: 15px;
+        }
+
+        nav button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            background: #ff6f61;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        nav button:hover {
+            background: #e63946;
+        }
+
+        .content {
+            display: none;
+            padding: 40px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .box {
+            background: white;
+            margin: 30px auto;
+            padding: 30px;
+            width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .avatar {
+            width: 180px;
+            border-radius: 50%;
+            margin-top: 15px;
+            border: 4px solid #ff6f61;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #fff;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .date {
+            color: #e63946;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Những điều thú vị trong những ngày Tết vừa qua của em</h1>
+</header>
+
+<nav>
+    <button onclick="showSection('about')">Giới Thiệu</button>
+    <button onclick="showSection('tet')">Trong Tết Có Gì Vui?</button>
+</nav>
+
+<!-- Giới thiệu -->
+<div id="about" class="content active">
+    <div class="box">
+        <h2>🌸 Giới Thiệu Bản Thân</h2>
+        <p>👩 Nữ 6/6/2008 quê Hưng Yên</p>
+        <p>🏫 HS trường THPT Võ Trường Toản - 12C15</p>
+        <img src="c:\Users\WELCOM THUY DUONG\Downloads\dcf621bb-86db-4b42-9bc4-2724ccf262d9.jfif" class="avatar" alt="Ảnh đại diện">
+    </div>
+</div>
+
+<!-- Trong Tết -->
+<div id="tet" class="content">
+    <div class="box">
+        <h2>🎉 Trong Tết Có Gì Vui?</h2>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>🌊 Mùng 3</h3>
+                <p class="date">📅 19/2/2026</p>
+                <p>✈️ Đi Nha Trang</p>
+                <p>🏖️ Tắm biển và lặn biển</p>
+                <p>🦞 Dùng bữa trưa là hải sản</p>
+                <p>🎆 Tối đi ăn hải sản và ngắm pháo bông</p>
+                <p>🌙 Tối muộn đi chợ đêm</p>
+                <img src="c:\Users\WELCOM THUY DUONG\Downloads\c9954a0b-726e-4bdd-a883-fd53527f21f9.jfif" alt="Mùng 3">
+            </div>
+
+            <div class="card">
+                <h3>🌅 Mùng 4</h3>
+                <p class="date">📅 20/2/2026</p>
+                <p>🍳 Dùng bữa sáng và làm thủ tục trả phòng</p>
+                <p>🏝️ Đến Phan Thiết tắm biển</p>
+                <p>🍽️ Ăn bữa tối là hải sản và đặc sản</p>
+                <p>🍡 Tối đi ăn vặt và kiếm chỗ sửa điện thoại</p>
+                <img src="c:\Users\WELCOM THUY DUONG\Downloads\75ec4c3a-0698-4249-a196-49a18395c3fd.jfif" alt="Mùng 4">
+            </div>
+
+            <div class="card">
+                <h3>🚗 Mùng 5</h3>
+                <p class="date">📅 21/2/2026</p>
+                <p>☕ Ăn sáng, đi dạo rồi trả phòng về lại TP.HCM</p>
+                <p>🍽️ trưa về ăn trưa ở nhà bác</p>
+                <p>📱 chiều đem đth đi sửa</p>
+                <img src="c:\Users\WELCOM THUY DUONG\Downloads\3e5d8f43-f517-4404-83b1-886489e36e54.jfif" alt="Hôm Sau">
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function showSection(sectionId) {
+        var sections = document.querySelectorAll('.content');
+        sections.forEach(function(section) {
+            section.classList.remove('active');
+        });
+
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
